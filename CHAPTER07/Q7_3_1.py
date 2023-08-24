@@ -1,12 +1,9 @@
-color_reference = {1: "red", 2: "blue", 3: "yellow", 4: "green", 5: "purple"}
-
-
 class MyDictKeyError(Exception):
     def __init__(self, key):
         self.key = key
 
     def __str__(self):
-        return
+        return "辞書にkeyが登録されていません {0}".format(self.key)
 
 
 def get_dict_value(dict_tbl, key):
@@ -16,6 +13,7 @@ def get_dict_value(dict_tbl, key):
         return dict_tbl[key]
 
 
+color_reference = {1: "red", 2: "blue", 3: "yellow", 4: "green", 5: "purple"}
 my_dict = {1: "red", 2: "blue", 3: "yellow"}
 
 try:
@@ -27,4 +25,4 @@ except MyDictKeyError as err:
     print(key, color_reference[key], "をmy_dictに追加しました")
     my_color = color_reference[key]
 
-my_color
+print(my_color)
