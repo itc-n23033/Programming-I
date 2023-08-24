@@ -26,13 +26,12 @@ class Cylinder:
         h = self.height
         return c * h
 
-    def chow_results(self):
+    def show_results(self):
         r = self.radius
         h = self.height
         S = self.calc_surface_area()
         V = self.calc_volume()
-        print("半径: {}, 高さ: {}, 表面積: {}, 体積: {}".
-format(r, h, S, V))
+        print("半径: {}, 高さ: {}, 表面積: {}, 体積: {}".format(r, h, S, V))
 
 
 c1 = Cylinder()
